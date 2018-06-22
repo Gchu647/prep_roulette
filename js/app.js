@@ -13,10 +13,6 @@ A random number will be generated every 5 seconds.*/
 // 1) Add some additional styling to your application.
 // 2) Create on and off buttons that will start and stop your application.
 
-roulNum.innerHTML = 0;
-
-var spin = setInterval(runRoulette, 5000);
-
 function runRoulette() {
     var num = Math.floor(Math.random() * 37);
 
@@ -35,4 +31,15 @@ function runRoulette() {
     }
 }
 
-//startButton.addEventListener("click", )
+var firstStart;
+
+function startFunction() {
+    firstStart = setInterval(runRoulette, 1000);
+}
+
+function stopFunction() {
+    clearInterval(firstStart);
+}
+
+startButton.addEventListener("click", startFunction);
+stopButton.addEventListener("click", stopFunction);

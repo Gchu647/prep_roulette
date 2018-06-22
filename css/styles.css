@@ -16,3 +16,34 @@ body {
     background-color: green;
     color: white;
 }
+
+#buttons {
+    display: flex;
+    flex-direction: row; /*You actually had to use flex-direction here, maybe because I used column*/
+    justify-content: space-around;
+    margin-top: 30px;
+    width: 30%;
+    height: 50px;
+}
+
+#startButton {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 50px;
+    border: solid 1px gray;
+    font-size: 25px;
+}
+
+#stopButton {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 50px; 
+    border: solid 1px gray;
+    font-size: 25px;
+}
